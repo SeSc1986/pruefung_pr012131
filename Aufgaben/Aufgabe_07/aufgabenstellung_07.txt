@@ -1,0 +1,9 @@
+Erstellen Sie ein „Spiel“, bei dem der Anwender eine Schaltfläche in einem Formular 
+„fangen“ muss.Die Schaltfläche soll regelmäßig ihre Position im Formular wechseln. Lassen Sie 
+dazu eine zufällige Position ermitteln, an der Sie die Schaltfläche einblenden.Denken Sie bitte daran, dass die Position der Schaltfläche so gesetzt werden muss, 
+dass die Schaltfläche immer vollständig im Formular zu sehen ist. Wie groß Sie das 
+Formular selbst machen, ist Ihnen freigestellt.Damit der Anwender eine Chance hat, die Schaltfläche zu „fangen“, soll sie mindes-tens eine Sekunde lang angezeigt werden. Die Schaltfläche gilt als gefangen, wenn 
+der Anwender sie anklicken konnte.Das Spiel soll maximal zwei Minuten dauern.Blenden Sie in dem Formular am unteren Rand eine Anzeige der aktuellen Treffer 
+und auch die verbleibende Zeit in Sekunden ein. Nach 10 Treffern oder nach Ablauf der Spielzeit soll das Spiel beendet werden. Wenn 
+der Anwender 10 Treffer erzielt hat, blenden Sie am Ende des Spiels einen Dialog 
+ein, in dem eine Meldung wie „Herzlichen Glückwunsch“ steht. Wenn der Anwen-der in den zwei Minuten keine 10 Treffer erzielt hat, gilt das Spiel als verloren. Las-sen Sie dann eine Meldung wie „Sie haben leider verloren“ anzeigen.In beiden Fällen soll das Programm beendet werden, wenn der Anwender den Dia-log schließt.

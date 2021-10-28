@@ -1,0 +1,5 @@
+Programmieren Sie ein Hangman-Spiel.Das Spiel soll so funktionieren:• Das Programm ermittelt zufällig ein Wort aus einer Reihe vorgegebener Wörter. • Lassen Sie für das Wort für jeden Buchstaben ein Sternchen anzeigen. 
+• Der Anwender hat 10 Versuche, das Wort zu erraten. Dabei darf er pro Versuch 
+einen Buchstaben eingeben. Wenn der Buchstabe in dem Wort vorkommt, soll er 
+angezeigt werden. Dem Anwender wird dann auch kein Versuch abgezogen. • Findet der Anwender dagegen keinen Buchstaben, wird ihm ein Versuch abge-zogen und er kann weiterraten. • Damit der Anwender weiß, welche Buchstaben er schon probiert hat, können Sie 
+zum Beispiel bereits ausgewählte Zeichen aus dem Kombinationsfeld löschen. 

@@ -1,0 +1,3 @@
+Erstellen Sie ein Programm, das den Text in zwei Labels nach einem Klick auf eine 
+Schaltfläche tauscht. Der Tausch soll beliebig oft möglich sein.Verwenden Sie ein Kontrollkästchen, das den Text in den beiden Labels vergrößert. 
+Wie groß der Text wird, ist beliebig.Beim Abschalten der Markierung soll der Text wieder verkleinert werden. Verwenden Sie dazu die ursprüngliche Größe des Textes.

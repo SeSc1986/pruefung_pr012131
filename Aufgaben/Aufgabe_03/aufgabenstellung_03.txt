@@ -1,0 +1,3 @@
+Erstellen Sie ein Programm, das eine Zeichenkette einliest und dann die Anzahl der 
+Vokale sowie die Anzahl der Konsonanten in der Zeichenkette ermittelt. Als Konso-nant dürfen dabei alle Zeichen gezählt werden, die kein Vokal sind – also zum Bei-spiel auch Zahlen und Sonderzeichen.Berücksichtigen Sie bei der Ermittlung der Vokale und Konsonanten sowohl Groß- 
+als auch Kleinbuchstaben.Benutzen Sie für die Lösung dieser Aufgabe eine switch-Konstruktion.

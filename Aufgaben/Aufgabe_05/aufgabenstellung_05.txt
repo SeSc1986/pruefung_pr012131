@@ -1,0 +1,6 @@
+Erstellen Sie ein Programm, das die Höhe eines gleichschenkligen Dreiecks einliest 
+und das Dreieck dann mit Sternchen auf dem Bildschirm ausgibt.Ein Beispiel:Wenn die Höhe 3 eingegeben wird, sollte die Ausgabe so aussehen: 
+
+  *
+ ***
+*****

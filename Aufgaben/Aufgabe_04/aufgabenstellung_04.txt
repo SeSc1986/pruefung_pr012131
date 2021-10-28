@@ -1,0 +1,2 @@
+Erstellen Sie ein Programm, das die Ziehung der Lottozahlen simuliert und das 
+Ergebnis auf dem Bildschirm ausgibt.Es darf keine Zahl doppelt verwendet werden!
