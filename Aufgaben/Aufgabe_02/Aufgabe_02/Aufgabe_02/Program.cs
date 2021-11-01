@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,15 +14,11 @@ namespace Aufgabe_02
 
         static void Main(string[] args)
         {
-            List<int> inputNumbers = new List<int>();
-
             Console.WriteLine("Dieses Programm liest solange Zahlen ein, bis das erste mal eine '0' eingegeben wird.\n" +
                         "Dann wird die Summe und der Mittelwert der bis dahin eingegeben Zahlen berechnet.");
             Console.WriteLine("Zahleneingabe >>>");
 
-
             ZahlenEingabe();
-        
 
         }
 
@@ -29,41 +26,38 @@ namespace Aufgabe_02
         {
             string input = Console.ReadLine();
 
-
-            try
+            if (Int32.TryParse(input, out lastInput))
             {
-                if (Int32.TryParse(input, out lastInput))
+                if (lastInput == 0)
                 {
+                    if (inputNumbers.Count == 0)
+                    {
+                        Console.WriteLine("Sie müssen mindestens eine Zahl ungleich \'0\' eingeben.");
+                        ZahlenEingabe();
+                    }
+                    else
+                    {
+                    string summe = inputNumbers.Sum().ToString();
+                    string durchschnitt = inputNumbers.Average().ToString();
 
+                    Console.WriteLine("Die Summe der eingegebenen Zahlen ist " + summe + " und der Durchschnitt beträgt " + durchschnitt + ".");
+
+                    Console.WriteLine("Das Drücken einer beliebigen Taste beendet das Programm");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                    }
                 }
                 else
                 {
-                    throw
+                    inputNumbers.Add(lastInput);
+                    ZahlenEingabe();
                 }
-            }
-            catch (Exception e)
-            {
-     
-                Console.WriteLine("Bitte nur ganze Zahlen eingeben");
-                ZahlenEingabe();
-            }
-
-
-            if (lastInput == 0)
-            {
-
-                string summe = inputNumbers.Sum().ToString();
-                string durchschnitt = inputNumbers.Average().ToString();
-
-                Console.WriteLine("Die Summe der eingegebenen Zahlen ist " + summe + " und der Durchschnitt beträgt " + durchschnitt + ".");
-
-                Console.ReadLine();
             }
             else
             {
-                inputNumbers.Add(lastInput);
+                Console.WriteLine("Bitte nur ganze Zahlen eingeben");
                 ZahlenEingabe();
             }
-       }
+        }
     }
 }
