@@ -1,0 +1,3 @@
+Müssen die Wörter vorher bekannt sein?
+
+Wir arbeiten nur mit großbuchstaben (ß = SS), okay?
