@@ -21,13 +21,12 @@ namespace Aufgabe_04
         {
             InitializeBasket(bascet);
             GezogeneZahlen = Ziehung(anzahlDerGezogenenZahlen);
-
         }
 
 
         private static void InitializeBasket(int anzahlZahlen)
         {
-            for (int i = 0; i < anzahlZahlen; i++)
+            for (int i = 1; i <= anzahlZahlen; i++)
             {
                 lottozahlen.Add(i);
             }
