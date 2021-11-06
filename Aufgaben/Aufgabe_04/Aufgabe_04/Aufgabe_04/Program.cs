@@ -17,25 +17,20 @@ namespace Aufgabe_04
 
             Console.WriteLine("Zeit für Lotto! :");
 
-            List<int> lottozahlen1 = new List<int>();
+            InitializeBasket(49);
 
-            for (int i = 1; i <= 49; i++)
-            {
-                lottozahlen1.Add(i);
-            }
+            List<int> ziehung = Lotto6aus49();
 
+            AusgabeDerZiehung(ziehung);
 
-            lottozahlen1 = Shuffle(lottozahlen1);
+            Console.WriteLine("Das Drücken einer beliebigen Taste beendet das Programm");
+            Console.ReadKey();
+            Environment.Exit(0);
+        }
 
-
-            for (int i = 0; i < 49; i++)
-            {
-                lottozahlen.Add(lottozahlen1[i]);
-            }
-
-
-
-            List<int> ziehung = Lotto();
+        private static void AusgabeDerZiehung(List<int> ziehung)
+        {
+            ziehung.Sort();
 
             StringBuilder sb = new StringBuilder();
 
@@ -49,14 +44,33 @@ namespace Aufgabe_04
 
 
             Console.WriteLine("Gezogen wurden die Zahlen : " + ergebis);
-
-
-            Console.WriteLine("Das Drücken einer beliebigen Taste beendet das Programm");
-            Console.ReadKey();
-            Environment.Exit(0);
         }
 
-        private static List<int> Lotto()
+        private static void InitializeBasket(int anzahlZahlen)
+        {
+            List<int> lottozahlen1 = ShuffleBevore(anzahlZahlen);
+
+            for (int i = 0; i < anzahlZahlen; i++)
+            {
+                lottozahlen.Add(lottozahlen1[i]);
+            }
+        }
+
+        private static List<int> ShuffleBevore(int anzahlZahlen)
+        {
+            List<int> lottozahlen1 = new List<int>();
+
+            for (int i = 1; i <= anzahlZahlen; i++)
+            {
+                lottozahlen1.Add(i);
+            }
+
+
+            lottozahlen1 = Shuffle(lottozahlen1);
+            return lottozahlen1;
+        }
+
+        private static List<int> Lotto6aus49()
         {
             List<int> interimswerte = new List<int>();
 
