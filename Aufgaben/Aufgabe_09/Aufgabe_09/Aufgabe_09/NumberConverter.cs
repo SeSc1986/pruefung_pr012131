@@ -13,7 +13,10 @@ namespace Aufgabe_09
         protected string input;
         private string output;
 
+        private int numberAsInt;
+
         protected string Output { get => output; set => output = value; }
+        protected int NumberAsInt { get => numberAsInt; set => numberAsInt = value; }
 
         public NumberConverter(string input)
         {
