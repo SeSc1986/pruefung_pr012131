@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe_09", "Aufgabe_09\Aufgabe_09.csproj", "{E9176152-8094-4294-827A-35B0C9D1CB58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectConverter", "UnitTestProjectConverter\UnitTestProjectConverter.csproj", "{5B007871-0759-420E-A392-D90CB3E2B0C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "TestProject1\TestProject1.csproj", "{D9B60D35-CB20-44F1-A737-429BF1DC4030}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E9176152-8094-4294-827A-35B0C9D1CB58} = {E9176152-8094-4294-827A-35B0C9D1CB58}
 	EndProjectSection
@@ -20,10 +20,10 @@ Global
 		{E9176152-8094-4294-827A-35B0C9D1CB58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9176152-8094-4294-827A-35B0C9D1CB58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9176152-8094-4294-827A-35B0C9D1CB58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B007871-0759-420E-A392-D90CB3E2B0C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B007871-0759-420E-A392-D90CB3E2B0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B007871-0759-420E-A392-D90CB3E2B0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B007871-0759-420E-A392-D90CB3E2B0C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B60D35-CB20-44F1-A737-429BF1DC4030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B60D35-CB20-44F1-A737-429BF1DC4030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B60D35-CB20-44F1-A737-429BF1DC4030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B60D35-CB20-44F1-A737-429BF1DC4030}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

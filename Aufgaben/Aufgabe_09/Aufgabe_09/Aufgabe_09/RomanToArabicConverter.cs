@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Aufgabe_09
 {
-    class RomanToArabicConverter : NumberConverter
+    public class RomanToArabicConverter : NumberConverter
     {
 
         public RomanToArabicConverter(string input) : base(input)
         {
 
         }
+
         public override string ConversionMessage()
         {
             throw new NotImplementedException();
