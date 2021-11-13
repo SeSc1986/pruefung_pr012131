@@ -13,8 +13,16 @@ namespace Aufgabe_01
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Drücken Sie eine beliebige Taste ume alle Primzahlen unter 1000 anzeigen zu lassen.");
+            Console.WriteLine();
+            Console.ReadKey(true);
+
             string primesBelow1000 = SiebDesEratosthenes(1000);
-            Console.WriteLine(primesBelow1000);
+            Console.WriteLine("Primzahlen zwischen 1 und 1000: "+ Environment.NewLine + primesBelow1000);
+            Console.WriteLine();
+            Console.WriteLine("Drücken Sie eine beliebige Taste, um das Program zu beenden.");
+            Console.ReadKey(true);
+            Environment.Exit(0);
         }
 
 
