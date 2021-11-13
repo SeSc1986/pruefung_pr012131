@@ -14,8 +14,9 @@ namespace Aufgabe_03
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Erstellen Sie ein Programm, das eine Zeichenkette einliest und dann die Anzahl der Vokale sowie die Anzahl der Konsonanten in der Zeichenkette ermittelt." +
-                " Als Konsonant dürfen dabei alle Zeichen gezählt werden, die kein Vokal sind – also zum Beispiel auch Zahlen und Sonderzeichen.");
+            Console.WriteLine("Dieses Programm liest eine Zeichenkette ein und bestimmt dann die Anzahl der Vokale {a,e,i,o,u,ä,ö,ü,A,E,I,O,U,Ä,Ö,Ü}, sowie die Anzahl der Konsonanten in der Zeichenkette." +
+                " Als Konsonant zählen dabei alle Zeichen, die kein Vokal sind – also zum Beispiel auch Zahlen und Sonderzeichen.");
+            Console.WriteLine("Eingabe Zeichenekette>>>>");
 
             Run();
         }
@@ -58,6 +59,15 @@ namespace Aufgabe_03
                     case 'u':
                         anzahlVokale++;
                         break;
+                    case 'ä':
+                        anzahlVokale++;
+                        break;
+                    case 'ö':
+                        anzahlVokale++;
+                        break;
+                    case 'ü':
+                        anzahlVokale++;
+                        break;
                     case 'A':
                         anzahlVokale++;
                         break;
@@ -73,6 +83,15 @@ namespace Aufgabe_03
                     case 'U':
                         anzahlVokale++;
                         break;
+                    case 'Ä':
+                        anzahlVokale++;
+                        break;
+                    case 'Ö':
+                        anzahlVokale++;
+                        break;
+                    case 'Ü':
+                        anzahlVokale++;
+                        break;
                     default:
                         anzahlKonsonanten++;
                         break;
@@ -81,7 +100,7 @@ namespace Aufgabe_03
 
 
 
-            Console.WriteLine("Die eingegebene Zeichenkette enthält " + anzahlVokale.ToString() + " und " + anzahlKonsonanten.ToString() + " sonstige " +
+            Console.WriteLine("Die eingegebene Zeichenkette enthält " + anzahlVokale.ToString() + " Vokale und " + anzahlKonsonanten.ToString() + " Konsonanten (bzw. sonstige) " +
                 "Zeichen");
 
             Console.WriteLine("Das Drücken einer beliebigen Taste beendet das Programm");
