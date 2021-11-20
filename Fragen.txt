@@ -1,0 +1,41 @@
+Aufgabe_01:
+
+1. in meinem Program erfolgt die Ausgabe der Primzahlen auf der Konsole in Format "2 3 ... ". Löst das die Aufgbe, oder soll das Ergebnis noch in eine File geschrieben werden?
+
+
+Aufgabe_02:
+
+1. Zählen nur ganze Zahlen (int) - oder sind auch Double / float / dezimalzahlen zulässig?
+2. Dürfen die Erweiterungsmethoden  double IEnumerable<int>.Average() und int IEnumerable<int>.Sum() verwendet werden?
+
+Aufgabe_03:
+
+1. Was zählt als Vokal? Dies ist ja sprachenabhängig. Ich werte gerade folgende chars als Vokal {a,e,i,o,u,ä,ö,ü,A,E,I,O,U,Ä,Ö,Ü}.
+
+Aufgabe_04:
+
+1. Wir ziehen 6 aus 49 ohen Zurücklegen.
+
+Aufgabe_05: 
+
+1.
+
+Aufgabe_06:
+
+1. 
+
+Aufgabe_07:
+
+1.
+
+Aufgabe_08:
+
+1. Müssen die Wörter vorher bekannt sein? Derzeit sind hart gecoded. -> Sollen Sie für den Spieler Konfigurierbar sein?
+2. Das Programm arbeitet nur mit Großbuchstaben (ß = SS).
+
+Aufgabe_09:
+
+1. Was ist mit Zahlen größer als 3999
+
+Nach der Aufgabestellung ist VL eine gültige Zahl, nach meinen Infos nicht.
+

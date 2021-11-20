@@ -97,7 +97,7 @@ namespace Aufgabe_07
             // 
             // timerCatcher
             // 
-            this.timerCatcher.Interval = 1000;
+            this.timerCatcher.Interval = 1500;
             this.timerCatcher.Tick += new System.EventHandler(this.timerCatcher_Tick);
             // 
             // Form1
