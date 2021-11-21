@@ -4,29 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Aufgabe_09
 {
     public class RomanConverter
     {
         public const string NOVALIDINTEGER = "Bitte eine Zahl zwischen 1 und 3999 eingeben.";
-        public const string NOVALIDROMAN = "Keine Zulässige römische Zahl.";
-
-
-
-        private Dictionary<string,int> mapRomanToInt;
-
-        public RomanConverter()
-        {
-            mapRomanToInt = new Dictionary<string, int>();
-
-
-            for (int i = 1; i < 4000; i++)
-            {
-                mapRomanToInt.Add(this.ConvertIntToRoman(i), i);
-            }
-
-        }
-
+        public const string NOVALIDROMAN = "Keine zulässige römische Zahl.";
 
         public string ConvertIntToRoman(int inputArabic)
         {
@@ -100,19 +84,33 @@ namespace Aufgabe_09
 
         public int ConvertRomanToInt(string inputRoman)
         {
-            if (mapRomanToInt.ContainsKey(inputRoman))
+            int result = 0;
+            RomanValues romanValues = new RomanValues();
+            Dictionary<char, int> rnv = romanValues.romanNumberValue;
+
+            char[] ziffern = inputRoman.ToCharArray();
+
+            for (int i = 0; i < ziffern.Length; i++)
             {
-                return mapRomanToInt[inputRoman];
+                if ( i != ziffern.Length -1 && rnv[ziffern[i + 1]] > rnv[ziffern[i]]  )
+                {
+                    result = result + rnv[ziffern[i + 1]] - rnv[ziffern[i]];
+                    i++;
+                }
+                else
+                {
+                    result = result + rnv[ziffern[i]];
+                }
+            }
+
+            if (ConvertIntToRoman(result) == inputRoman)
+            {
+            return result;
             }
             else
             {
                 return -1;
             }
-
-
-
         }
-
-
     }
 }

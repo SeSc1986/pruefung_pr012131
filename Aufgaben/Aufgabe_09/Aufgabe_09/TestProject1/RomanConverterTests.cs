@@ -50,5 +50,24 @@ namespace TestProject1
                 output.Should().Be(expectedOutput);
             }
         }
+
+
+        [Theory]
+        [InlineData("MCMXCVII", 1997)]
+        [InlineData("MMIX", 2009)]
+        [InlineData("CDXIV", 414)]
+        public void TestSamples(string roman, int arabic)
+        {
+            // Arrange
+            RomanConverter rc = new RomanConverter();
+
+            // Act
+            int arabicOutput = rc.ConvertRomanToInt(roman);
+            string romanOutput = rc.ConvertIntToRoman(arabic);
+
+            // Assert
+            arabicOutput.Should().Be(arabic);
+            romanOutput.Should().Be(roman);
+        }
     }
 }
