@@ -11,6 +11,7 @@ namespace Aufgabe_09
         {
             InitializeComponent();
             labelDisplayArabicToRoman.Text = String.Empty;
+            labelDisplayRomanToArabic.Text = String.Empty;
         }
 
         private void buttonConvertRtoA_Click(object sender, EventArgs e)
