@@ -1,41 +1,41 @@
-Aufgabe_01:
+Hallo Herr Albrecht,
 
-1. in meinem Program erfolgt die Ausgabe der Primzahlen auf der Konsole in Format "2 3 ... ". Löst das die Aufgbe, oder soll das Ergebnis noch in eine File geschrieben werden?
+Zu meiner Prüfungsarbeit habe ich ein paar Rückfragen zur Aufgabenstellung.
+
+Aufgabe_01: Primzahlen
+
+In meinem Programm erfolgt die Ausgabe der Primzahlen auf der Konsole in Format "2 3 ... ". Löst das die Aufgabe, oder soll das Ergebnis noch in eine File geschrieben werden?
 
 
 Aufgabe_02:
 
 1. Zählen nur ganze Zahlen (int) - oder sind auch Double / float / dezimalzahlen zulässig?
-2. Dürfen die Erweiterungsmethoden  double IEnumerable<int>.Average() und int IEnumerable<int>.Sum() verwendet werden?
+2. Soll das Programm bei Eingabe der einzelnen Ziffer "0" die weiteren Schritte einleiten, oder bereits bei der Eingabe einer Zahl die die Ziffer '0' als char enthält (zB "10") .
+3. Dürfen die Erweiterungsmethoden  double IEnumerable<int>.Average() und int IEnumerable<int>.Sum() verwendet werden?
 
 Aufgabe_03:
 
-1. Was zählt als Vokal? Dies ist ja sprachenabhängig. Ich werte gerade folgende chars als Vokal {a,e,i,o,u,ä,ö,ü,A,E,I,O,U,Ä,Ö,Ü}.
+1. Was zählt als Vokal? Dies ist ja sprachen-abhängig. Ich werte gerade folgende chars als Vokal {a,e,i,o,u,ä,ö,ü,A,E,I,O,U,Ä,Ö,Ü}. Ist dies im Sinne der Aufgabenstellung?
 
-Aufgabe_04:
+Aufgabe_04: LOTTO
 
-1. Wir ziehen 6 aus 49 ohen Zurücklegen.
+Welches Lotto ist genau gemeint. Meine derzeitige Lösung zieht 6 aus 49.  Eine Superzahl oder sonstige Varianten beachte derzeit ich nicht.
 
-Aufgabe_05: 
 
-1.
-
-Aufgabe_06:
-
-1. 
-
-Aufgabe_07:
-
-1.
 
 Aufgabe_08:
 
-1. Müssen die Wörter vorher bekannt sein? Derzeit sind hart gecoded. -> Sollen Sie für den Spieler Konfigurierbar sein?
-2. Das Programm arbeitet nur mit Großbuchstaben (ß = SS).
+1. Müssen die Wörter vorher bekannt sein? Derzeit sind sie hart gecoded. -> Sollen Sie für den Spieler Konfigurierbar sein?
+2. Mein Programm arbeitet nur mit Großbuchstaben (ß = SS), ist dies im Sinne der Aufgabenstellung
 
 Aufgabe_09:
 
-1. Was ist mit Zahlen größer als 3999
+1. Was ist mit Zahlen größer als 3999, müssen diese auch hin und her konvertierbar sein. Nach meinen Recherchen gibt es hier kein einheitliches Regelwerk. Mein Prorgam beschränkt sich derzeit auf die Zahlen 1 bis 3999. Löst dies die Aufgabe?
 
-Nach der Aufgabestellung ist VL eine gültige Zahl, nach meinen Infos nicht.
+2. Nach der Aufgabestellung  könnte man VL ("= 50 -5 = 45" ) als gültige Zahl römische Zahl auffassen. Ich lasse für die "Subtraktion" jedoch nur die 10er potenzen zu. (I,X,C) , 45 = 40 + 5 = XLV . 
 
+3. Als Zeichen für römische Zahlen lasse ich nur Großbuchstaben zu (also IV und nicht iv oder Mischformen wie iV). Ist dies im Sinner der Aufgabenstellung?
+
+
+Viele Grüße,
+Sebastian Schneckenburger
