@@ -11,17 +11,36 @@ namespace Aufgabe_05
         static void Main(string[] args)
         {
             Console.WriteLine("Wir zeichnen eine gleichschenkliges Dreieck.");
-            Console.WriteLine("Bitte geben sie die gewünschte Höhe des Dreiecks ein");
+            Console.WriteLine();
 
+            Party();
+
+            Console.ReadKey();
+        }
+
+        private static void Party()
+        {
+            Console.WriteLine("Bitte geben sie die gewünschte Höhe des Dreiecks als natürliche Zahl ein");
 
             string hoeheAlsString = Console.ReadLine();
 
-            //#TODO Fehleingabe behandeln
-            int hoehe = Int32.Parse(hoeheAlsString);
+            if (Int32.TryParse(hoeheAlsString, out int hoehe))
+            {
+                if (hoehe < 1)
+                {
+                    Console.WriteLine("Zahlen kleiner \"1\" sind nicht zulässig!");
+                    Party();
+                }
+                ZeichneDreieck(hoehe);
+            }
+            else
+            {
+                Party();
+            }
+        }
 
-
-
-
+        private static void ZeichneDreieck(int hoehe)
+        {
             for (int i = 1; i <= hoehe; i++)
             {
                 StringBuilder sb = new StringBuilder();
@@ -45,23 +64,16 @@ namespace Aufgabe_05
 
                 Console.WriteLine(stringzeile);
             }
-
-            Console.ReadKey();
         }
-
-
 
         static int AnzahlSterneInZeile(int i)
         {
             return 2 * i - 1;
         }
 
-
         static int LeerzeichenblockInZeile(int i, int hoehe)
         {
             return hoehe - i;
         }
-
-
     }
 }
