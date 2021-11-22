@@ -9,13 +9,14 @@ namespace Aufgabe_02
 {
     class Program
     {
-        private static int lastInput = 0;
-        private static List<int> inputNumbers = new List<int>();
+        private static decimal lastInput = 0;
+        private static List<decimal> inputNumbers = new List<decimal>();
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Dieses Programm liest solange Zahlen ein, bis das erste mal eine '0' eingegeben wird.\n" +
-                        "Dann wird die Summe und der Mittelwert der bis dahin eingegeben Zahlen berechnet.");
+            Console.WriteLine("Dieses Programm liest solange Zahlen ein, bis das erste mal die Zahl \"0\" eingegeben wird.\n" +
+                        "Dann wird die Summe und der Mittelwert der bis dahin eingegeben Zahlen berechnet. " +
+                        "Akzeptiert als Eingabe werden ganze Zahlen  (\"1\",\"-12\", \"123\") sowie Zahlen in Dezimalschreibweise mit Dezimalpunkt oder Komma (\"1,0\", \"1.5\").");
             Console.WriteLine("Zahleneingabe >>>");
 
             ZahlenEingabe();
@@ -26,7 +27,10 @@ namespace Aufgabe_02
         {
             string input = Console.ReadLine();
 
-            if (Int32.TryParse(input, out lastInput))
+            input = input.Replace(".", ",");
+
+
+            if (decimal.TryParse(input, out lastInput))
             {
                 if (lastInput == 0)
                 {
@@ -55,7 +59,7 @@ namespace Aufgabe_02
             }
             else
             {
-                Console.WriteLine("Bitte nur ganze Zahlen eingeben");
+                Console.WriteLine("Bitte nur Zahlen eingeben");
                 ZahlenEingabe();
             }
         }
