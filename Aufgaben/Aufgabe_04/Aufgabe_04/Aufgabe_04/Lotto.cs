@@ -26,6 +26,8 @@ namespace Aufgabe_04
 
         private static void InitializeBasket(int anzahlZahlen)
         {
+            lottozahlen.Clear();
+
             for (int i = 1; i <= anzahlZahlen; i++)
             {
                 lottozahlen.Add(i);
