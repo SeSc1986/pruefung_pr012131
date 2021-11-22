@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Aufgabe_08
 {
     public partial class Form1 : Form
     {
-
         Hangman hangman;
 
         public Form1()
@@ -24,12 +16,8 @@ namespace Aufgabe_08
         private void InitHangman()
         {
             hangman = new Hangman();
-
             RefreshDisplayedTexts();
-
-
             listBoxAlphabet.Items.Clear();
-
             foreach (char letter in Hangman.GermanAlphabet)
             {
                 listBoxAlphabet.Items.Add(letter);
@@ -51,10 +39,9 @@ namespace Aufgabe_08
 
                 foreach (char letter in hangman.WortAsCharraray)
                 {
-                    if (ausgwählterBuchstabe == letter)
+                    if (ausgwählterBuchstabe == letter.ToString().ToLower()[0])
                     {
-                        hangman.BuchstabeIstErraten.Remove(letter);
-                        hangman.BuchstabeIstErraten.Add(letter, true);
+                        hangman.BuchstabeIstErraten[letter.ToString().ToLower()[0]] = true; 
                         erfolg = true;
                         break;
                     }
@@ -67,6 +54,7 @@ namespace Aufgabe_08
 
                 if (hangman.Sieg())
                 {
+                    RefreshDisplayedTexts();
                     MessageBox.Show("SIEG!");
                     NeuesSpiel();
                 }
@@ -95,9 +83,6 @@ namespace Aufgabe_08
             {
                 this.Close();
             }
-
-
         }
-
     }
 }

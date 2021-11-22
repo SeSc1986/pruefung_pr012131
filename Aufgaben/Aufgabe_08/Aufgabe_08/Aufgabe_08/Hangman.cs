@@ -1,39 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Aufgabe_08
 {
     class Hangman
     {
         //geklaut von https://www.pax-an.org/2016/05/super-galgenmannchen-worter.html
-        private string[] woerter = { "HEIZÖLRÜCKSTOSSABDÄMPFUNG", "DONAUDAMPFSCHIFFFAHRTSKAPITÄNSGESELLTSCHAFTSMÜTZENHALTERUNG",
-            "TYP", "LOKOMOTIVDAMPFKESSELDRUCKVENTILVERSCHLUSSKLAPPE", "KIRSCHKERNWEITSPUCKWETTBEWERB",
-            "RECYCLING", "WEIHNACHTSMANNSCHOKOLADENEINPACKPAPIER", "ATMOSPHÄRE ", "DESTINATIONSLEBENSZYKLUSMODELL", "ZYKLOP" ,
-            "ZYKLON", "GYMNASTIK", "RHYTHMUS", "DESOXYRIBONUKLEINSÄURE", "METAPHER ", "UNIVERSALINDIKATORPAPIERSCHNIPSELCHEN", "ARBEITSUNFÄHIGKEITSBESCHEINIGUNG ",
-            "HUNDEHAFTPFLICHTVERSICHERUNG" };
-
-        private int versucheUebrig;
+        private string[] woerter = { "Heizölrückstoßabdämpfung", "Donaudampfschifffahrtskapitänsgeselltschaftsmützenhalterung",
+            "Typ", "Lokomotivdampfkesseldruckventilverschlussklappe", "Kirschkernweitspuckwettbewerb",
+            "Recycling", "Weihnachtsmannschokoladeneinpackpapier", "Atmosphäre", "Destinationslebenszyklusmodell", "Zyklop" ,
+            "Zyklon", "Gymnastik", "Rhythmus", "Desoxyribonukleinsäure", "Metapher ", "Universalindikatorpapierschnipselchen", "Arbeitsunfähigkeitsbescheinigung ",
+            "Hundehaftpflichtversicherung" };
 
         // geklaut von https://stackoverflow.com/questions/314466/generating-an-array-of-letters-in-the-alphabet
-        private static readonly char[] germanAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ".ToCharArray();
+        private static readonly char[] germanAlphabet = "abcdefghijklmnopqrstuvwxyzäöüß".ToCharArray();
 
-
-        Dictionary<char, bool> buchstabeIstErraten;
-
-        private string wort;
-
-        char[] wortAsCharraray ;
-
-        public string Wort { get => wort; set => wort = value; }
+        public string Wort { get; set; }
 
         public static char[] GermanAlphabet => germanAlphabet;
 
-        public int VersucheUebrig { get => versucheUebrig; set => versucheUebrig = value; }
-        public char[] WortAsCharraray { get => wortAsCharraray; set => wortAsCharraray = value; }
-        public Dictionary<char, bool> BuchstabeIstErraten { get => buchstabeIstErraten; set => buchstabeIstErraten = value; }
+        public int VersucheUebrig { get; set; }
+        public char[] WortAsCharraray { get; set; }
+        public Dictionary<char, bool> BuchstabeIstErraten { get; set; }
 
         public Hangman()
         {
@@ -44,12 +33,11 @@ namespace Aufgabe_08
                 BuchstabeIstErraten.Add(letter, false);
             }
 
-
-            wort = Zufallsowrt();
-            WortAsCharraray = wort.ToCharArray();
+            Wort = Zufallswort();
+            WortAsCharraray = Wort.ToCharArray();
         }
 
-        private string Zufallsowrt()
+        private string Zufallswort()
         {
             Random zufall = new Random(DateTime.Now.Millisecond);
             int maxInt = woerter.Length;
@@ -62,11 +50,9 @@ namespace Aufgabe_08
         {
             StringBuilder sb = new StringBuilder();
 
-            
-
             foreach (char letter in WortAsCharraray)
             {
-                if (BuchstabeIstErraten[letter])
+                if (BuchstabeIstErraten[letter.ToString().ToLower()[0]])
                 {
                     sb.Append(letter);
                 }
@@ -79,14 +65,13 @@ namespace Aufgabe_08
             return sb.ToString();
         }
 
-
         public bool Sieg()
         {
             bool result = true;
 
-            foreach (char letter in wortAsCharraray)
+            foreach (char letter in WortAsCharraray)
             {
-                if (!BuchstabeIstErraten[letter])
+                if (!BuchstabeIstErraten[letter.ToString().ToLower()[0]])
                 {
                     result = false;
                     break;
@@ -95,6 +80,5 @@ namespace Aufgabe_08
 
             return result;
         }
-
     }
 }
