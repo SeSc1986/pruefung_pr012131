@@ -88,11 +88,20 @@ namespace Aufgabe_09
             RomanValues romanValues = new RomanValues();
             Dictionary<char, int> rnv = romanValues.romanNumberValue;
 
+
             char[] ziffern = inputRoman.ToCharArray();
 
             for (int i = 0; i < ziffern.Length; i++)
             {
-                if ( i != ziffern.Length -1 && rnv[ziffern[i + 1]] > rnv[ziffern[i]]  )
+                if (!rnv.ContainsKey(ziffern[i]))
+                {
+                    return -1;
+                }
+            }
+
+            for (int i = 0; i < ziffern.Length; i++)
+            {
+                    if ( i != ziffern.Length -1 && rnv[ziffern[i + 1]] > rnv[ziffern[i]]  )
                 {
                     result = result + rnv[ziffern[i + 1]] - rnv[ziffern[i]];
                     i++;
