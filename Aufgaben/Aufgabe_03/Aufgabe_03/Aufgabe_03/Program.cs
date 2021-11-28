@@ -16,7 +16,7 @@ namespace Aufgabe_03
         {
             Console.WriteLine("Dieses Programm liest eine Zeichenkette ein und bestimmt dann die Anzahl der Vokale {a,e,i,o,u,ä,ö,ü,A,E,I,O,U,Ä,Ö,Ü}, sowie die Anzahl der Konsonanten in der Zeichenkette." +
                 " Als Konsonant zählen dabei alle Zeichen, die kein Vokal sind – also zum Beispiel auch Zahlen und Sonderzeichen.");
-            Console.WriteLine("Eingabe Zeichenekette>>>>");
+            Console.WriteLine("Eingabe der Zeichenkette (Eingabe beenden per \"Enter\") >>>>");
 
             Run();
         }

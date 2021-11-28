@@ -71,7 +71,7 @@ namespace Aufgabe_09
             this.buttonConvertAtoR.Name = "buttonConvertAtoR";
             this.buttonConvertAtoR.Size = new System.Drawing.Size(203, 23);
             this.buttonConvertAtoR.TabIndex = 3;
-            this.buttonConvertAtoR.Text = "Konvertiere arabisch nach nörmisch";
+            this.buttonConvertAtoR.Text = "Konvertiere arabisch nach rörmisch";
             this.buttonConvertAtoR.UseVisualStyleBackColor = true;
             this.buttonConvertAtoR.Click += new System.EventHandler(this.buttonConvertAtoR_Click);
             // 

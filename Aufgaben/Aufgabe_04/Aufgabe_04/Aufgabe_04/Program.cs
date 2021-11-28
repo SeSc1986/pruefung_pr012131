@@ -8,7 +8,7 @@ namespace Aufgabe_04
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Zeit für Lotto! :");
+            Console.WriteLine("Zeit für Lotto!");
 
             NeuesSpiel();
        }

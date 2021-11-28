@@ -10,7 +10,7 @@ namespace Aufgabe_05
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wir zeichnen eine gleichschenkliges Dreieck.");
+            Console.WriteLine("Wir zeichnen ein gleichschenkliges Dreieck.");
             Console.WriteLine();
 
             Party();
@@ -20,7 +20,7 @@ namespace Aufgabe_05
 
         private static void Party()
         {
-            Console.WriteLine("Bitte geben sie die gewünschte Höhe des Dreiecks als natürliche Zahl ein");
+            Console.WriteLine("Bitte geben Sie die gewünschte Höhe des Dreiecks als natürliche Zahl ein und bestätigen Sie die Eingabe durch \"Enter\".");
 
             string hoeheAlsString = Console.ReadLine();
 

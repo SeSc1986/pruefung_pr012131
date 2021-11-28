@@ -15,9 +15,9 @@ namespace Aufgabe_02
         static void Main(string[] args)
         {
             Console.WriteLine("Dieses Programm liest solange Zahlen ein, bis das erste mal die Zahl \"0\" eingegeben wird.\n" +
-                        "Dann wird die Summe und der Mittelwert der bis dahin eingegeben Zahlen berechnet. " +
+                        "Dann wird die Summe und der Mittelwert der bis dahin eingegebene Zahlen berechnet. " +
                         "Akzeptiert als Eingabe werden ganze Zahlen  (\"1\",\"-12\", \"123\") sowie Zahlen in Dezimalschreibweise mit Dezimalpunkt oder Komma (\"1,0\", \"1.5\").");
-            Console.WriteLine("Zahleneingabe >>>");
+            Console.WriteLine("Eingabe einer Zahl bitte per \"Enter-taste\" abschließen. >>>");
 
             ZahlenEingabe();
 

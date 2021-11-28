@@ -13,7 +13,7 @@ namespace Aufgabe_01
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Drücken Sie eine beliebige Taste ume alle Primzahlen unter 1000 anzeigen zu lassen.");
+            Console.WriteLine("Drücken Sie eine beliebige Taste um alle Primzahlen unter 1000 anzeigen zu lassen.");
             Console.WriteLine();
             Console.ReadKey(true);
 
