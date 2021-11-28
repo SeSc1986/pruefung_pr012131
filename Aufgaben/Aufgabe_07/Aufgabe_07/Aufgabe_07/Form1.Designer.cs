@@ -37,11 +37,13 @@ namespace Aufgabe_07
             this.timerTimeLeft = new System.Windows.Forms.Timer(this.components);
             this.buttonCatch = new System.Windows.Forms.Button();
             this.timerCatcher = new System.Windows.Forms.Timer(this.components);
+            this.textBoxTimerDisplay = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxTimerDisplay);
             this.groupBox1.Controls.Add(this.labelTimeLeft);
             this.groupBox1.Controls.Add(this.labelHits);
             this.groupBox1.Controls.Add(this.buttonStart);
@@ -54,7 +56,7 @@ namespace Aufgabe_07
             // labelTimeLeft
             // 
             this.labelTimeLeft.AutoSize = true;
-            this.labelTimeLeft.Location = new System.Drawing.Point(385, 30);
+            this.labelTimeLeft.Location = new System.Drawing.Point(146, 20);
             this.labelTimeLeft.Name = "labelTimeLeft";
             this.labelTimeLeft.Size = new System.Drawing.Size(118, 13);
             this.labelTimeLeft.TabIndex = 2;
@@ -63,7 +65,7 @@ namespace Aufgabe_07
             // labelHits
             // 
             this.labelHits.AutoSize = true;
-            this.labelHits.Location = new System.Drawing.Point(199, 25);
+            this.labelHits.Location = new System.Drawing.Point(87, 20);
             this.labelHits.Name = "labelHits";
             this.labelHits.Size = new System.Drawing.Size(53, 13);
             this.labelHits.TabIndex = 1;
@@ -71,7 +73,7 @@ namespace Aufgabe_07
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(57, 20);
+            this.buttonStart.Location = new System.Drawing.Point(6, 15);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(75, 23);
             this.buttonStart.TabIndex = 0;
@@ -87,18 +89,27 @@ namespace Aufgabe_07
             // 
             // buttonCatch
             // 
+            this.buttonCatch.Enabled = false;
             this.buttonCatch.Location = new System.Drawing.Point(335, 524);
             this.buttonCatch.Name = "buttonCatch";
             this.buttonCatch.Size = new System.Drawing.Size(117, 43);
             this.buttonCatch.TabIndex = 1;
             this.buttonCatch.Text = "Fang Mich";
             this.buttonCatch.UseVisualStyleBackColor = true;
+            this.buttonCatch.Visible = false;
             this.buttonCatch.Click += new System.EventHandler(this.buttonCatch_Click);
             // 
             // timerCatcher
             // 
             this.timerCatcher.Interval = 1500;
             this.timerCatcher.Tick += new System.EventHandler(this.timerCatcher_Tick);
+            // 
+            // textBoxTimerDisplay
+            // 
+            this.textBoxTimerDisplay.Location = new System.Drawing.Point(285, 15);
+            this.textBoxTimerDisplay.Name = "textBoxTimerDisplay";
+            this.textBoxTimerDisplay.Size = new System.Drawing.Size(1269, 20);
+            this.textBoxTimerDisplay.TabIndex = 3;
             // 
             // Form1
             // 
@@ -126,6 +137,7 @@ namespace Aufgabe_07
         private System.Windows.Forms.Timer timerTimeLeft;
         private System.Windows.Forms.Button buttonCatch;
         private System.Windows.Forms.Timer timerCatcher;
+        private System.Windows.Forms.TextBox textBoxTimerDisplay;
     }
 }
 

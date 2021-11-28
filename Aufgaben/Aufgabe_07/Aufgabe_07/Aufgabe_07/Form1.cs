@@ -26,16 +26,11 @@ namespace Aufgabe_07
         {
             InitializeComponent();
             timerTimeLeft.Stop();
-            ResetCatchButton();
-            xMax = this.Size.Width - buttonCatch.Width - 25;
-            yMax = this.Size.Height - 2* buttonCatch.Height - groupBox1.Height;
-            buttonCatch.Location = new Point(xMax, yMax);
-            buttonCatch.Enabled = false;
+            timerCatcher.Stop();
         }
 
         private void timerTimeLeft_Tick(object sender, EventArgs e)
         {
-            ResetCatchButton();
             timeLeft--;
             labelTimeLeft.Text = "Zeit verbleibend: " + timeLeft.ToString() + "s";
 
@@ -55,7 +50,9 @@ namespace Aufgabe_07
             timeLeft = 120;
             hits = 0;
 
+            buttonCatch.Visible = true;
 
+            ResetCatchButton();
             timerTimeLeft.Start();
             timerCatcher.Start();
 
