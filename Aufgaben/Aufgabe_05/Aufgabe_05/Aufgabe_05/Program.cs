@@ -15,6 +15,7 @@ namespace Aufgabe_05
 
             Party();
 
+            Console.WriteLine(Environment.NewLine + "Das Drücken einer beliebigen Taste beendet das Program.");
             Console.ReadKey();
         }
 

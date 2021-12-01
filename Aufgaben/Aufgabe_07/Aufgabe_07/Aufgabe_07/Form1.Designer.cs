@@ -37,13 +37,11 @@ namespace Aufgabe_07
             this.timerTimeLeft = new System.Windows.Forms.Timer(this.components);
             this.buttonCatch = new System.Windows.Forms.Button();
             this.timerCatcher = new System.Windows.Forms.Timer(this.components);
-            this.textBoxTimerDisplay = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBoxTimerDisplay);
             this.groupBox1.Controls.Add(this.labelTimeLeft);
             this.groupBox1.Controls.Add(this.labelHits);
             this.groupBox1.Controls.Add(this.buttonStart);
@@ -104,13 +102,6 @@ namespace Aufgabe_07
             this.timerCatcher.Interval = 1500;
             this.timerCatcher.Tick += new System.EventHandler(this.timerCatcher_Tick);
             // 
-            // textBoxTimerDisplay
-            // 
-            this.textBoxTimerDisplay.Location = new System.Drawing.Point(285, 15);
-            this.textBoxTimerDisplay.Name = "textBoxTimerDisplay";
-            this.textBoxTimerDisplay.Size = new System.Drawing.Size(1269, 20);
-            this.textBoxTimerDisplay.TabIndex = 3;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,7 +128,6 @@ namespace Aufgabe_07
         private System.Windows.Forms.Timer timerTimeLeft;
         private System.Windows.Forms.Button buttonCatch;
         private System.Windows.Forms.Timer timerCatcher;
-        private System.Windows.Forms.TextBox textBoxTimerDisplay;
     }
 }
 

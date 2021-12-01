@@ -32,7 +32,7 @@ namespace Aufgabe_07
         private void timerTimeLeft_Tick(object sender, EventArgs e)
         {
             timeLeft--;
-            labelTimeLeft.Text = "Zeit verbleibend: " + timeLeft.ToString() + "s";
+            labelTimeLeft.Text = "Zeit verbleibend: " + timeLeft.ToString() + " s";
 
             if (timeLeft <= 0)
             {

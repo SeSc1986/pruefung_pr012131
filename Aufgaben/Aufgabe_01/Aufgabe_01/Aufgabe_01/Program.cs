@@ -8,8 +8,6 @@ namespace Aufgabe_01
 {
     class Program
     {
-        Dictionary<int, bool> intIsPrime = new Dictionary<int, bool>();
-
 
         static void Main(string[] args)
         {
@@ -26,7 +24,7 @@ namespace Aufgabe_01
         }
 
 
-        //Liefert einen String der die Primzahle kleiner als n aufsteigend enthält, getrennt druch ein Leerzeichen.
+        //Liefert einen String der die Primzahlen kleiner als n aufsteigend enthält, getrennt durch ein Leerzeichen.
         private static string SiebDesEratosthenes(int n)
         {
             int maxCheck = (int)Math.Ceiling(Math.Sqrt(n));

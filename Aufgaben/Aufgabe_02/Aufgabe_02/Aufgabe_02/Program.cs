@@ -32,7 +32,7 @@ namespace Aufgabe_02
 
             if (decimal.TryParse(input, out lastInput))
             {
-                if (lastInput == 0)
+                if (input == "0")
                 {
                     if (inputNumbers.Count == 0)
                     {
